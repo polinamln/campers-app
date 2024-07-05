@@ -1,0 +1,39 @@
+.nav {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+
+  border-bottom: solid 1px rgba(0, 0, 0, 0.164);
+}
+
+.ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.li {
+  margin: 0;
+}
+
+.a {
+  text-decoration: none;
+  font-family: "Inter", system-ui, "Avenir", "Helvetica", "Arial", sans-serif;
+  line-height: 1.5;
+  font-weight: bold;
+  color: #101828;
+
+  transition: color 0.3s ease;
+}
+
+.a:hover {
+  text-decoration: underline;
+  color: #e44848;
+}
+
+.active {
+  color: #e44848;
+  font-weight: bold;
+}

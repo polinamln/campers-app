@@ -1,0 +1,97 @@
+.div {
+  border: 1px solid rgba(16, 24, 40, 0.2);
+  border-radius: 20px;
+  width: 888px;
+
+  display: flex;
+  gap: 24px;
+  padding: 24px;
+}
+
+.image {
+  border-radius: 10px;
+  width: 290px;
+  height: 310px;
+  object-fit: cover;
+}
+
+.text {
+  height: 310px;
+}
+
+.desc {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.description {
+  max-height: 20px;
+  overflow: hidden;
+  width: 526px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #475467;
+
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.list {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+}
+
+.item {
+  background-color: #f2f4f7;
+  border-radius: 100px;
+  width: 126px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item p {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.btn {
+  border-radius: 200px;
+  padding: 16px 40px;
+  width: 166px;
+  height: 56px;
+  color: #fff;
+  background-color: #e44848;
+  border: none;
+  margin-top: 24px;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  cursor: pointer;
+}
+
+.bth:hover {
+  background-color: #d84343;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fav {
+  display: flex;
+  gap: 10px;
+}
+.fav button {
+  border: transparent;
+  background-color: transparent;
+  cursor: pointer;
+}
