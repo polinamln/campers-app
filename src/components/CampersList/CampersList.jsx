@@ -8,22 +8,10 @@ import { CamperItem } from "../CamperItem/CamperItem";
 export default function CampersList() {
   const dispatch = useDispatch();
   const campers = useSelector((state) => state.campers.items);
-  const status = useSelector((state) => state.campers.status);
-  const error = useSelector((state) => state.campers.error);
 
   useEffect(() => {
     dispatch(fetchCampers());
   }, [dispatch]);
-
-  if (status === "loading") {
-    return <div>Loading...</div>;
-  }
-
-  if (status === "failed") {
-    return <div>Error: {error}</div>;
-  }
-
-  console.log(campers);
 
   return (
     <div className={styles.container}>

@@ -1,6 +1,18 @@
+import { useState } from "react";
 import styles from "./CamperItem.module.css";
+import CamperModal from "../CamperModal/CamperModal";
 
 export function CamperItem({ camper }) {
+  const [modalIsOpen, setIsOpen] = useState(false);
+
+  const handleClick = () => {
+    setIsOpen(true);
+  };
+
+  const onClose = () => {
+    setIsOpen(false);
+  };
+
   return (
     <div className={styles.div}>
       {camper.gallery.length > 0 && (
@@ -19,7 +31,9 @@ export function CamperItem({ camper }) {
           </div>
         </div>
         <div className={styles.desc}>
-          <p>{camper.rating}</p>
+          <p className={styles.rating}>
+            {camper.rating}({camper.reviews.length} Reviews)
+          </p>
           <p>{camper.location}</p>
         </div>
         <div className={styles.description}>{camper.description}</div>
@@ -45,9 +59,12 @@ export function CamperItem({ camper }) {
           </li>
         </ul>
 
-        <button type="submit" className={styles.btn}>
+        <button onClick={handleClick} type="submit" className={styles.btn}>
           Show more
         </button>
+        {modalIsOpen && (
+          <CamperModal onClose={onClose} camper={camper}></CamperModal>
+        )}
       </div>
     </div>
   );

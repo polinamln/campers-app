@@ -1,0 +1,133 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 80%;
+  max-height: 80%;
+  overflow: auto;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+
+  width: 982px;
+  padding: 40px;
+}
+
+.modal h1 {
+  margin: 0;
+  font-size: 24px;
+  text-align: center;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #555;
+}
+
+.modal-close:hover {
+  color: #333;
+}
+
+.picturesList li img {
+  border-radius: 10px;
+  width: 290px;
+  height: 310px;
+  object-fit: cover;
+}
+
+.picturesList {
+  margin-top: 24px;
+  display: flex;
+  gap: 16px;
+}
+
+.divName {
+  display: flex;
+  justify-content: space-between;
+}
+
+.desc {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.divName h1 {
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.price {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.rating {
+  text-decoration: underline;
+}
+
+.description {
+  margin-top: 24px;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.nav {
+  margin-top: 44px;
+  display: flex;
+  gap: 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.353);
+}
+
+.navLink {
+  text-decoration: none;
+
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  color: inherit;
+}
+
+.active {
+  text-decoration: none;
+
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  color: inherit;
+  border-bottom: 5px solid #e44848;
+  padding-bottom: 24px;
+}
+
+.btnClose {
+  border: none;
+  cursor: pointer;
+}
+
+.btnClose svg {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+}

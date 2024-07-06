@@ -15,3 +15,17 @@ export const fetchCampers = createAsyncThunk(
     }
   }
 );
+
+export const fetchOneCamper = createAsyncThunk(
+  "campers/fetchAll",
+  async ({ id }, thunkAPI) => {
+    try {
+      const res = await axios.get(
+        `https://668814f50bc7155dc01a675b.mockapi.io/adverts/${id}`
+      );
+      return res.data;
+    } catch (e) {
+      return thunkAPI.rejectWithValue(e);
+    }
+  }
+);
