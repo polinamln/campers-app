@@ -21,7 +21,7 @@ export default function Features() {
           <li className={styles.item}>
             <p>{camper.engine}</p>
           </li>
-          {camper.details.kitchen && (
+          {camper.details.kitchen !== "" && (
             <li className={styles.item}>
               <p>Kitchen</p>
             </li>
@@ -36,12 +36,47 @@ export default function Features() {
           <li className={styles.item}>
             <p>{camper.details.airConditioner} air conditioner</p>
           </li>
-          <li className={styles.item}>
-            <p>{camper.details.CD} </p>
-          </li>
-          {camper.details.radio && (
+          {camper.details.CD !== 0 && (
+            <li className={styles.item}>
+              <p>CD </p>
+            </li>
+          )}
+
+          {camper.details.radio !== 0 && (
             <li className={styles.item}>
               <p>Radio</p>
+            </li>
+          )}
+
+          {camper.details.shower !== 0 && (
+            <li className={styles.item}>
+              <p>Shower</p>
+            </li>
+          )}
+
+          {camper.details.toilet && (
+            <li className={styles.item}>
+              <p>Toilet</p>
+            </li>
+          )}
+          {camper.details.freezer !== 0 && (
+            <li className={styles.item}>
+              <p>Freezer</p>
+            </li>
+          )}
+          {camper.details.microwave && (
+            <li className={styles.item}>
+              <p>Microwave</p>
+            </li>
+          )}
+          {camper.details.gas !== "" && (
+            <li className={styles.item}>
+              <p>Gas</p>
+            </li>
+          )}
+          {camper.details.water !== "" && (
+            <li className={styles.item}>
+              <p>Water</p>
             </li>
           )}
 

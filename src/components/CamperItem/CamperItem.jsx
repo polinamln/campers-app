@@ -48,9 +48,12 @@ export function CamperItem({ camper }) {
           <li className={styles.item}>
             <p>{camper.engine}</p>
           </li>
-          <li className={styles.item}>
-            <p>Kitchen</p>
-          </li>
+          {camper.details.kitchen !== "" && (
+            <li className={styles.item}>
+              <p>Kitchen</p>
+            </li>
+          )}
+
           <li className={styles.item}>
             <p>{camper.details.beds} beds</p>
           </li>
