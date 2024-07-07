@@ -3,21 +3,21 @@ import axios from "axios";
 
 export const fetchCampers = createAsyncThunk(
   "campers/fetchAll",
-  async (_, thunkAPI) => {
+  async (page, thunkAPI) => {
     try {
-      const res = await axios.get(
-        "https://668814f50bc7155dc01a675b.mockapi.io/adverts"
+      const response = await axios.get(
+        `https://668814f50bc7155dc01a675b.mockapi.io/adverts?page=${page}&limit=4`
       );
 
-      return res.data;
-    } catch (e) {
-      return thunkAPI.rejectWithValue(e);
+      return response.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
     }
   }
 );
 
 export const fetchOneCamper = createAsyncThunk(
-  "campers/fetchAll",
+  "campers/fetchOne",
   async ({ id }, thunkAPI) => {
     try {
       const res = await axios.get(

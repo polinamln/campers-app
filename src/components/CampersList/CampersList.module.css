@@ -1,3 +1,35 @@
 .container {
   display: flex;
+  gap: 64px;
+}
+
+.loadMore {
+  border: 1px solid rgba(71, 84, 103, 0.2);
+  border-radius: 200px;
+  padding: 16px 0;
+  font-weight: 500;
+  font-size: 16px;
+  color: #101828;
+  font-family: inherit;
+  width: 145px;
+  margin-top: 50px;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.loadMore:hover {
+  border: 1px solid #d84343;
+}
+
+.div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }

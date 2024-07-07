@@ -1,5 +1,7 @@
 .div {
   padding-top: 44px;
+  display: flex;
+  gap: 24px;
 }
 
 .list {

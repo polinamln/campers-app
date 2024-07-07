@@ -24,6 +24,11 @@
   padding: 40px;
 }
 
+.ratingIcon {
+  fill: #ffc531;
+  margin-right: 5px;
+}
+
 .modal h1 {
   margin: 0;
   font-size: 24px;
@@ -106,6 +111,7 @@
   font-size: 20px;
   line-height: 120%;
   color: inherit;
+  padding-bottom: 24px;
 }
 
 .active {
@@ -123,11 +129,10 @@
 .btnClose {
   border: none;
   cursor: pointer;
+  background-color: transparent;
 }
 
-.btnClose svg {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  stroke-width: 0;
+.btnCloseIcon {
+  width: 32px;
+  height: 32px;
 }

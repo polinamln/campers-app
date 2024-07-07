@@ -1,0 +1,42 @@
+.div {
+  display: flex;
+  gap: 24px;
+  margin-top: 44px;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background-color: #f2f4f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #e44848;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.inf {
+  display: flex;
+  gap: 16px;
+}
+
+.reviews ul {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-top: 44px;
+  padding-left: 0;
+}
+
+.ratingIcon {
+  fill: #ffc531;
+}
+
+.ratingDiv {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}

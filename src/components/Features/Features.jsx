@@ -1,9 +1,12 @@
+import ModalForm from "../ModalForm/ModalForm";
 import styles from "./Features.module.css";
 import { useLocation } from "react-router-dom";
 
 export default function Features() {
   const location = useLocation();
   const camper = location.state;
+
+  console.log(camper);
 
   return (
     <div className={styles.div}>
@@ -114,7 +117,9 @@ export default function Features() {
           </li>
         </ul>
       </div>
-      <div className={styles.form}></div>
+      <div className={styles.form}>
+        <ModalForm></ModalForm>
+      </div>
     </div>
   );
 }
