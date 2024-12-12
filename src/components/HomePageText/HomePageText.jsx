@@ -17,6 +17,10 @@ export default function HomePageText() {
         <li>Professional support and consultations</li>
         <li>Safety and reliability at every stage</li>
       </ul>
+      <div className={styles.box}>
+        <img src="/campers.jpeg" className={styles.img}></img>
+        <img src="/campers2.jpeg" className={styles.img}></img>
+      </div>
     </div>
   );
 }

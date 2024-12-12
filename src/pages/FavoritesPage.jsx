@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import Header from "../components/Header/Header";
 import { CamperItem } from "../components/CamperItem/CamperItem";
 import styles from "./FavoritesPage.module.css";
+// import Footer from "../components/Footer/Footer";
 
 export default function FavoritesPage() {
   const campers = useSelector((state) => state.favorites.items);
@@ -16,6 +17,7 @@ export default function FavoritesPage() {
             </li>
           ))}
       </ul>
+      {/* <Footer></Footer> */}
     </div>
   );
 }
