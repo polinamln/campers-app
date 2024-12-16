@@ -17,8 +17,9 @@ export default function Reviews() {
                 <div>
                   <h3>{item.reviewer_name}</h3>
                   <div className={styles.ratingDiv}>
-                    <FaStar className={styles.ratingIcon} />
-                    <p>{item.reviewer_rating}</p>
+                    {Array.from({ length: item.reviewer_rating }, (_, i) => (
+                      <FaStar key={i} className={styles.ratingIcon} />
+                    ))}
                   </div>
                 </div>
               </div>
