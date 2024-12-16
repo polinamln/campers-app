@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./CatalogFilter.module.css";
+import Icon from "../Icon";
 
 const vehicleEquipment = [
   { label: "AC", value: "airConditioner" },
@@ -43,23 +44,23 @@ export default function CatalogFilter({ onFilter }) {
     }
   };
 
-  const handleSearch = () => {
+  const handleSearch = (e) => {
     let hasError = false;
     const newErrors = { location: "", vehicleType: "" };
 
-    if (!location) {
-      newErrors.location = "Location is required.";
-      hasError = true;
-    }
+    // if (!location) {
+    //   newErrors.location = "Location is required.";
+    //   hasError = true;
+    // }
 
-    if (!selectedVehicleType) {
-      newErrors.vehicleType = "Vehicle type is required.";
-      hasError = true;
-    }
+    // if (!selectedVehicleType) {
+    //   newErrors.vehicleType = "Vehicle type is required.";
+    //   hasError = true;
+    // }
 
     setErrors(newErrors);
 
-    if (!hasError) {
+    if (!hasError || e.key === "Shift") {
       onFilter(location, selectedVehicleEquipment, selectedVehicleType);
     }
   };
@@ -69,13 +70,24 @@ export default function CatalogFilter({ onFilter }) {
       <div className={styles.filterSection}>
         <label className={styles.location}>
           Location
-          <input
-            className={styles.locationInput}
-            type="text"
-            value={location}
-            onChange={handleLocation}
-          />
+          <div className={styles.inputWithIcon}>
+            <input
+              className={styles.locationInput}
+              type="text"
+              value={location}
+              onChange={handleLocation}
+              placeholder="Ukraine, Kyiv"
+              onKeyDown={handleSearch}
+            />
+            <Icon
+              id="icon-map-pin"
+              w="15px"
+              h="18px"
+              className={styles.iconMap}
+            />
+          </div>
         </label>
+
         {errors.location && (
           <p className={styles.errorText}>{errors.location}</p>
         )}
@@ -93,7 +105,16 @@ export default function CatalogFilter({ onFilter }) {
                 value={option.value}
                 onChange={handleEquipmentChange}
               />
-              <p className={styles.filterSectionText}>{option.label}</p>
+              <div className={styles.filterSectionTextBox}>
+                <Icon
+                  id={option.value}
+                  w="25px"
+                  h="25px"
+                  className={styles.icon}
+                />
+
+                <p className={styles.filterSectionText}>{option.label}</p>
+              </div>
             </li>
           ))}
         </ul>
@@ -111,7 +132,11 @@ export default function CatalogFilter({ onFilter }) {
                 onChange={handleTypeChange}
                 className={styles.filterSectionCheckbox}
               />
-              <p className={styles.filterSectionText}>{option.label}</p>
+              <div className={styles.filterSectionTextBox}>
+                <Icon id={option.value} w="40px" h="28px" color="#101828" />
+
+                <p className={styles.filterSectionText}>{option.label}</p>
+              </div>
             </li>
           ))}
         </ul>
@@ -119,6 +144,7 @@ export default function CatalogFilter({ onFilter }) {
           <p className={styles.errorText}>{errors.vehicleType}</p>
         )}
       </div>
+
       <button className={styles.searchButton} onClick={handleSearch}>
         Search
       </button>

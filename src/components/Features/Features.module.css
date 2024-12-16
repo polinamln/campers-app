@@ -26,6 +26,7 @@
   padding: 12px 18px;
   font-weight: 500;
   font-size: 16px;
+  gap: 8px;
 }
 
 .details {
@@ -49,4 +50,21 @@
 .detailsItem p {
   font-weight: 500;
   font-size: 18px;
+}
+
+.icon {
+  display: inline-block;
+
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: none;
+}
+
+.iconPetrol {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
 }

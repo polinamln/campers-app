@@ -30,7 +30,9 @@ export default function CampersList() {
   };
 
   const isEndOfCollection =
-    campers.length % ITEMS_PER_PAGE !== 0 || campers.length === 0;
+    campers.length % ITEMS_PER_PAGE !== 0 ||
+    campers.length === 0 ||
+    campers.length <= 4;
 
   const onFilter = (location, selectedEquipment, selectedType) => {
     const filtered = campers.filter((camper) => {

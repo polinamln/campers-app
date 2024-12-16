@@ -20,6 +20,23 @@
   font-size: 16px;
   width: 360px;
   border: none;
+  padding-left: 45px;
+}
+
+.inputWithIcon {
+  position: relative;
+  margin-top: 10px;
+}
+
+.iconMap {
+  display: inline-block;
+
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: none;
+  position: absolute;
+  top: 18px;
+  left: 20px;
 }
 
 .filterSectionSecond {
@@ -91,24 +108,39 @@
 
 .filterSectionSecondItem {
   position: relative;
-  width: 110px;
-  height: 95px;
 
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.filterSectionText {
-  font-weight: 500;
-  font-size: 16px;
+.filterSectionTextBox {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 
-  font-weight: bold;
+  margin: 9px 0;
+}
+
+.filterSectionText {
+  font-size: 16px;
+  line-height: 100%;
   font-size: 16px;
   color: #101828;
   text-align: center;
+}
+
+.icon {
+  display: inline-block;
+
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: none;
 }
