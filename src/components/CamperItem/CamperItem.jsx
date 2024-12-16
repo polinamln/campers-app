@@ -10,7 +10,7 @@ import {
 import { FaHeart, FaStar } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
-export function CamperItem({ camper }) {
+export function CamperItem({ camper, navTo }) {
   const [modalIsOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -20,11 +20,11 @@ export function CamperItem({ camper }) {
 
   const handleClick = () => {
     setIsOpen(true);
-    navigate(`/catalog/${camper._id}`);
+    navigate(`/${navTo}/${camper._id}`);
   };
 
   const onClose = () => {
-    navigate("/catalog");
+    navigate(`/${navTo}`);
     setIsOpen(false);
   };
 

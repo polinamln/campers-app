@@ -12,7 +12,7 @@ export default function FavoritesPage() {
         {campers &&
           campers.map((camper) => (
             <li key={camper._id}>
-              <CamperItem camper={camper} />
+              <CamperItem navTo="favorites" camper={camper} />
             </li>
           ))}
       </ul>

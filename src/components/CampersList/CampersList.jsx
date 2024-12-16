@@ -60,13 +60,13 @@ export default function CampersList() {
     <div className={styles.container}>
       <CatalogFilter campers={campers} onFilter={onFilter} />
       {loading ? (
-        <h1>Loading</h1>
+        <div className={styles.loading}>Loading...</div>
       ) : (
         <div className={styles.div}>
           <ul className={styles.list}>
             {campersToDisplay.map((camper) => (
               <li key={camper._id}>
-                <CamperItem camper={camper} />
+                <CamperItem navTo="catalog" camper={camper} />
               </li>
             ))}
           </ul>

@@ -3,12 +3,16 @@ import styles from "./HomePageText.module.css";
 export default function HomePageText() {
   return (
     <div className={styles.container}>
-      <h1 className={styles.heading}>Welcome!</h1>
-      <p className={styles.paragraph}>
-        We offer camper van rentals across Ukraine. Discover the convenience and
-        freedom of traveling with our comfortable motorhomes.
-      </p>
-      <p className={styles.paragraph}>Our services include:</p>
+      <div className={styles.containerImg}>
+        <h1 className={styles.heading}>Welcome!</h1>
+        <p className={styles.paragraph}>
+          We offer camper van rentals across Ukraine.
+          <br />
+          Discover the convenience and freedom of traveling with our comfortable
+          motorhomes.
+        </p>
+        <p className={styles.paragraph}>Our services include:</p>
+      </div>
       <ul className={styles.list}>
         <li>
           A wide selection of camper vans in various sizes and configurations
@@ -19,7 +23,7 @@ export default function HomePageText() {
       </ul>
       <div className={styles.box}>
         <img src="/campers.jpeg" className={styles.img}></img>
-        <img src="/campers2.jpeg" className={styles.img}></img>
+        <img src="/camper3.webp" className={styles.img}></img>
       </div>
     </div>
   );

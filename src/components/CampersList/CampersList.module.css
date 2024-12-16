@@ -34,3 +34,12 @@
   flex-direction: column;
   gap: 32px;
 }
+
+.loading {
+  margin-top: 150px;
+  font-size: 25px;
+  width: 928px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
